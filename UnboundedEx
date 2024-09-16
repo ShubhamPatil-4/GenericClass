@@ -1,0 +1,26 @@
+package generic;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class UnboundedEx {
+
+	public static void printData(List<?> list) {
+		for (Object E : list) {
+			System.out.println(E);
+		}
+	}
+
+	public static void main(String[] args) {
+		List<String> str = new ArrayList<>();
+		str.add("Shubham");
+		str.add("Patil");
+
+		List<Integer> e = new ArrayList<>();
+		e.add(22);
+		e.add(26);
+
+		printData(str);
+		printData(e);
+	}
+}
