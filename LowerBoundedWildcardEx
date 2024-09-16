@@ -1,0 +1,27 @@
+package generic;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LowerBoundedWildcardEx {
+
+	public static void main(String[] args) {
+		List<Number> number = new ArrayList<>();
+		List<Float> Floatnum = new ArrayList<>();
+
+		IntegerNumber(number);
+		System.out.println(number);
+
+//		IntegerNumber(Floatnum);
+//		System.out.println(Floatnum);
+
+	}
+
+	public static void IntegerNumber(List<? super Integer> list) {
+		list.add(250);
+		list.add(350);
+		list.add(500);
+		list.add(800);
+	}
+
+}
