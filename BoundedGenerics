@@ -1,0 +1,32 @@
+package generic;
+
+public class BoundedGenerics<T extends Number> {
+
+	private T salary;
+
+	public BoundedGenerics(T name) {
+
+		this.salary = salary;
+
+	}
+
+	public T getsalary() {
+		return salary;
+	}
+
+	public static void main(String args[]) {
+
+		BoundedGenerics<Integer> obj = new BoundedGenerics<Integer>(66);
+		System.out.println("Integer Value:" + obj.getsalary());
+
+		BoundedGenerics<Double> obj1 = new BoundedGenerics<>(8.8);
+		System.out.println("Double Value:" + obj1.getsalary());
+
+		BoundedGenerics<Float> obj2 = new BoundedGenerics<>(7.5f);
+		System.out.println("Double Value:" + obj2.getsalary());
+
+//			BoundedGenerics<String>obj3=new BoundedGenerics<>("Shubham_Patil");  
+//			System.out.println("String Value:" + obj3.getsalary());
+
+	}
+}
